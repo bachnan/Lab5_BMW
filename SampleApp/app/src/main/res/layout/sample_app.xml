@@ -47,17 +47,18 @@
         app:layout_constraintBottom_toBottomOf="@id/view"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Sapp_content"
         android:layout_width="350dp"
         android:layout_height="200dp"
-        android:text="HELLO MY_ACCOUNT, WELCOME TO SAMPLE APPLICATION"
+        android:gravity="center"
+        android:text="Ni Hao "
         android:textColor="@color/black"
         android:textSize="60px"
         android:textStyle="bold"
-        android:gravity="center"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/statusView"
-        app:layout_constraintBottom_toBottomOf="@id/view"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

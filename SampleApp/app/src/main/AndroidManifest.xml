@@ -14,6 +14,11 @@
         tools:targetApi="34">
 
         <activity
+            android:name=".NiHao"
+            android:exported="false" >
+        </activity>
+
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" >
 
