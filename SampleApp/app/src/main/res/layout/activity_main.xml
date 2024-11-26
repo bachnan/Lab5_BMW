@@ -83,7 +83,7 @@
         tools:ignore="MissingConstraints"/>
 
     <Button
-        android:id="@+id/resgisterButton"
+        android:id="@+id/registerButton"
         android:layout_width="145dp"
         android:layout_height="52dp"
         android:background="@drawable/button_background"
