@@ -8,14 +8,15 @@ const port = 8888;
 app.use(bodyParser.json());
 
 const mongoURI = 'mongodb+srv://webappdevclub:yZr44JTBCFRnqH8O@cryptocluster.nwrciji.mongodb.net/?retryWrites=true&w=majority&appName=CryptoCluster';
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongoURI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
 const userSchema = new mongoose.Schema({
-  username: String,
-  password: String,
+  name: String,
+  passwordHash: String,
   email: String,
+  salt: String
 });
 
 const User = mongoose.model('SampleApplication', userSchema, 'SampleApplication');
