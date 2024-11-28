@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -61,7 +62,7 @@ public class SQLiteConnector extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_USER_NAME, user.getName());
         values.put(COLUMN_USER_EMAIL, user.getEmail());
-        values.put(COLUMN_USER_PASSWORD, user.getPassword());
+//        values.put(COLUMN_USER_PASSWORD, user.getPassword());
 
         // Inserting Row
         db.insert(TABLE_USER, null, values);
@@ -73,7 +74,7 @@ public class SQLiteConnector extends SQLiteOpenHelper {
      *
      * @return list
      */
-    public List<User> getAllUser() {
+    public List<User> getAllUser() throws NoSuchAlgorithmException {
         // array of columns to fetch
         String[] columns = {
                 COLUMN_USER_ID,

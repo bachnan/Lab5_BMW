@@ -9,6 +9,7 @@ public class User {
     private String name;
     private String email;
     private String password;
+    private String passwordHash;
     private String salt;
 
     public int getId() {return id;}
@@ -17,9 +18,9 @@ public class User {
     public void setName(String name) {this.name = name;}
     public String getEmail() {return email;}
     public void setEmail(String email) {this.email = email;}
-    
-    private String getPasswordHash() { return passwordHash; }
+
     private void setPasswordHash(String passwordHash) { this.passwordHash = passwordHash; }
+    private String getPasswordHash() { return passwordHash; }
     private String getSalt() { return salt; }
     private void setSalt(String salt) { this.salt = salt; }
 
@@ -45,5 +46,9 @@ public class User {
         byte[] saltBytes = new byte[16];
         sr.nextBytes(saltBytes);
         return Base64.getEncoder().encodeToString(saltBytes);
+    }
+
+    public String getPassword() {
+        return password;
     }
 }
